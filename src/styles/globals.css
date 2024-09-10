@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+@layer base {
+    *{
+        box-sizing: border-box;
+    }
+}
+
+@layer components {
+
+    .swiper {
+        @apply h-full w-full
+    }
+
+    .swiper-slide {
+        @apply text-center bg-white flex items-center
+    }
+
+    .swiper-slide img {
+        @apply w-full object-cover object-center block h-full
+    }
+
+    .swiper-button-prev {
+        @apply left-3/4 top-[85%] font-bold !important
+    }
+
+    .swiper-button-next {
+        @apply left-[85%] top-[85%] font-bold !important
+    }
+
+
+    .mySwiper .swiper-slide::before ,
+    .trendingSlider .swiper-slide::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom:0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.31) 0%, rgba(0, 0, 0, 0.01) 100%);
+        border-radius: 0 0 0 100px;
+    }
+
+    :root {
+        --swiper-theme-color: #ffff !important;
+        --swiper-navigation-size: 20px !important;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+}
+
+.mySwiper .swiper-pagination-clickable .swiper-pagination-bullet {
+    border: white 1px solid;
+    border-radius: 10px;
+    opacity: 1;
+    background-color: inherit;
+}
+
+.mySwiper .swiper-pagination-clickable .swiper-pagination-bullet-active {
+    background-color: white;
+}
+
+.paginatedSlider .swiper-pagination-clickable .swiper-pagination-bullet {
+    width: 26px;
+    height: 6px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.paginatedSlider .swiper-pagination-clickable .swiper-pagination-bullet-active {
+    background-color: #0D3DE5;
+    width: 40px;
+    transition: width 0.3s ease;
+}
+
+.custom-toast-container {
+    z-index: 99999999 !important;
+}
+
+.main-slider .swiper-slide-thumb-active{
+    opacity: 100;
+}
+
+.search-input::placeholder{
+    font-weight: 600;
+    color: #8a8a8a;
+}
+
+
+
+
+
+
+
+

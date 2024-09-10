@@ -1,0 +1,1 @@
+export const CarClassesMock=['Compact SUV','Compact SUV','Full-size SUV','Luxury Car']
